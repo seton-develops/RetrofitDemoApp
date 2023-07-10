@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/midVERGUIDE1"
@@ -27,64 +27,177 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
 
-    <LinearLayout
-        android:id="@+id/response_holder"
+
+    <TextView
+        android:id="@+id/tvUserIDLabel"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/midHORGUIDE1"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="User ID:"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintBottom_toTopOf="@+id/tvPostIDLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <TextView
+        android:id="@+id/tvUserID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvUserIDLabel"
         app:layout_constraintEnd_toEndOf="@id/midVERGUIDE2"
-        app:layout_constraintStart_toStartOf="@id/midVERGUIDE1"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/tvUserIDLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvUserIDLabel" />
 
-        <TextView
-            android:id="@+id/tvUserID"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvPostIDLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Post #:"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitleLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="1" />
 
-        <TextView
-            android:id="@+id/tvPostID"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvPostID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@id/tvPostIDLabel"
+        app:layout_constraintEnd_toStartOf="@+id/midVERGUIDE2"
+        app:layout_constraintStart_toEndOf="@+id/tvPostIDLabel"
+        app:layout_constraintTop_toTopOf="@id/tvPostIDLabel"
+        app:layout_constraintHorizontal_bias="0"/>
 
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="The title"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvTitleLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Title:"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintBottom_toTopOf="@+id/tvBodyLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
 
-        <TextView
-            android:id="@+id/tvBody"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="The Body"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="The title"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitleLabel"
+        app:layout_constraintEnd_toStartOf="@+id/midVERGUIDE2"
+        app:layout_constraintStart_toEndOf="@+id/tvTitleLabel"
+        app:layout_constraintTop_toTopOf="@id/tvTitleLabel" />
+
+    <TextView
+        android:id="@+id/tvBodyLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Message:"
+        app:layout_constraintBottom_toTopOf="@+id/midHORGUIDE1"
+        app:layout_constraintEnd_toStartOf="@+id/midVERGUIDE2"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <TextView
+        android:id="@+id/tvBody"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="The Body"
+        app:layout_constraintBottom_toBottomOf="@id/tvBodyLabel"
+        app:layout_constraintEnd_toEndOf="@id/midVERGUIDE2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvBodyLabel"
+        app:layout_constraintTop_toTopOf="@id/tvBodyLabel" />
+
+
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/response_holder"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity = "center"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/midHORGUIDE1"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/midVERGUIDE2"-->
+<!--        app:layout_constraintStart_toStartOf="@id/midVERGUIDE1"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvUserID"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:text="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvPostID"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:text="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvTitle"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:text="The title"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvBody"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:text="The Body"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+<!--    </LinearLayout>-->
+
+
 
 
     <Button
@@ -95,6 +208,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/midHORGUIDE1" />
+
+    <android.widget.SearchView
+        android:id="@+id/svSearchPost"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:queryHint="Type a number from 1-100"
+        android:iconifiedByDefault="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnRefresh"
+        app:layout_constraintEnd_toStartOf="@+id/midVERGUIDE2"
+        app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
         app:layout_constraintTop_toTopOf="@+id/midHORGUIDE1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

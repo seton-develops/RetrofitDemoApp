@@ -8,4 +8,8 @@ class Repository {
     suspend fun getPost(): Response<TypicodeData> {
         return TypicodeInstance.api.getPost()
     }
+
+    suspend fun getSpecificPost(id: Long): Response<TypicodeData> {
+        return TypicodeInstance.api.getSpecificPost(id)
+    }
 }
