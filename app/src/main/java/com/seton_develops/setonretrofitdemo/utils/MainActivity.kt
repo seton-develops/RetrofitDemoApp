@@ -2,15 +2,11 @@ package com.seton_develops.setonretrofitdemo.utils
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.SearchView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.seton_develops.setonretrofitdemo.R
 import com.seton_develops.setonretrofitdemo.repository.Repository
-import org.w3c.dom.Text
 import java.lang.IllegalArgumentException
 import java.lang.NumberFormatException
 
@@ -44,6 +40,9 @@ class MainActivity : AppCompatActivity() {
 
         val repository = Repository()
         val viewModelFactory = MainViewModelFactory(repository)
+
+
+
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
         viewModel.getPost()
 

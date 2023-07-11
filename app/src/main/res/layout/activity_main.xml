@@ -11,42 +11,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/midVERGUIDE1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/midVERGUIDE2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.95" />
 
 
     <TextView
         android:id="@+id/tvUserIDLabel"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:gravity="clip_horizontal"
         android:text="User ID:"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintWidth_percent="0.2"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvPostIDLabel"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1" />
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintWidth_percent="0.2" />
 
     <TextView
         android:id="@+id/tvUserID"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/roundedcorners"
         android:gravity="center"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="@+id/tvUserIDLabel"
@@ -59,51 +61,57 @@
         android:id="@+id/tvPostIDLabel"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:gravity="clip_horizontal"
         android:text="Post #:"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintWidth_percent="0.2"
+
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvTitleLabel"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintVertical_bias="1" />
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintWidth_percent="0.2" />
 
     <TextView
         android:id="@+id/tvPostID"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@drawable/roundedcorners"
         android:gravity="center"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="@id/tvPostIDLabel"
         app:layout_constraintEnd_toStartOf="@+id/midVERGUIDE2"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toEndOf="@+id/tvPostIDLabel"
-        app:layout_constraintTop_toTopOf="@id/tvPostIDLabel"
-        app:layout_constraintHorizontal_bias="0"/>
+        app:layout_constraintTop_toTopOf="@id/tvPostIDLabel" />
 
     <TextView
         android:id="@+id/tvTitleLabel"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:gravity="clip_horizontal"
         android:text="Title:"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintWidth_percent="0.2"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvBodyLabel"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1" />
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintWidth_percent="0.2" />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/roundedcorners"
         android:gravity="center"
         android:text="The title"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="@id/tvTitleLabel"
         app:layout_constraintEnd_toStartOf="@+id/midVERGUIDE2"
         app:layout_constraintStart_toEndOf="@+id/tvTitleLabel"
@@ -113,11 +121,12 @@
         android:id="@+id/tvBodyLabel"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:gravity="clip_horizontal"
         android:text="Message:"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/midHORGUIDE1"
         app:layout_constraintEnd_toStartOf="@+id/midVERGUIDE2"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHeight_percent="0.25"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
         app:layout_constraintTop_toTopOf="parent"
@@ -128,97 +137,46 @@
         android:id="@+id/tvBody"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/roundedcorners"
         android:gravity="center"
         android:text="The Body"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="@id/tvBodyLabel"
         app:layout_constraintEnd_toEndOf="@id/midVERGUIDE2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvBodyLabel"
         app:layout_constraintTop_toTopOf="@id/tvBodyLabel" />
 
-
-    <!--    <LinearLayout-->
-<!--        android:id="@+id/response_holder"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:orientation="vertical"-->
-<!--        android:gravity = "center"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/midHORGUIDE1"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/midVERGUIDE2"-->
-<!--        app:layout_constraintStart_toStartOf="@id/midVERGUIDE1"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvUserID"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:gravity="center"-->
-<!--            android:text="1"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvPostID"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:gravity="center"-->
-<!--            android:text="1"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvTitle"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:gravity="center"-->
-<!--            android:text="The title"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvBody"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:gravity="center"-->
-<!--            android:text="The Body"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-<!--    </LinearLayout>-->
-
-
-
+<!--    android:autoSizeTextType="uniform"-->
 
     <Button
         android:id="@+id/btnRefresh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Refresh"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/midHORGUIDE1" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:insetRight="0dp"
+        android:insetLeft="0dp"
+        android:text="Go!"
+        app:layout_constraintBottom_toBottomOf="@+id/svSearchPost"
+        app:layout_constraintEnd_toStartOf="@+id/midVERGUIDE2"
+        app:layout_constraintStart_toEndOf="@+id/svSearchPost"
+        app:layout_constraintTop_toTopOf="@+id/svSearchPost"
+        app:layout_constraintVertical_bias="0.5" />
 
     <android.widget.SearchView
         android:id="@+id/svSearchPost"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="59dp"
-        android:queryHint="Type a number from 1-100"
         android:iconifiedByDefault="false"
-        app:layout_constraintBottom_toTopOf="@+id/btnRefresh"
+        android:background="@drawable/roundedcorners"
+        android:queryHint="Type a number (1-100)"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/midVERGUIDE2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/midVERGUIDE1"
-        app:layout_constraintTop_toTopOf="@+id/midHORGUIDE1" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBody"
+        app:layout_constraintVertical_bias="0.287"
+        app:layout_constraintWidth_percent="0.65" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
