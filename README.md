@@ -1,6 +1,9 @@
 # RetrofitDemoApp
 An app to practice my Retrofit skills. Pulls data from the typicode fake API using retrofit and with a MVVM architecture
 
+## Youtube Demo
+[![Watch the video](https://img.youtube.com/vi/3l6TbYEbaoo/default.jpg)](https://youtu.be/3l6TbYEbaoo)
+
 ## 🚀 About Me
 Self-taught developer learning web and android development. Always improving and never stopping
 
@@ -8,6 +11,8 @@ Self-taught developer learning web and android development. Always improving and
 ## Libraries/Tech
 
 **Language:** [Kotlin](https://kotlinlang.org/)
+
+**Data Source:** [Typicode](https://jsonplaceholder.typicode.com/posts)
 
 **Architecture:** [MVVM](https://developer.android.com/jetpack/guide)
 
