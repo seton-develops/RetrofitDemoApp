@@ -1,6 +1,10 @@
 # RetrofitDemoApp
 An app to practice my Retrofit skills. Pulls data from the typicode fake API using retrofit and with a MVVM architecture
 
+<p align="center">
+  <img src="https://github.com/seton-develops/RetrofitDemoApp/blob/master/Retrofit%20Demo%20Screenshot.png" width="180" height="360" />
+</p>
+
 ## Youtube Demo
 [![Watch the video](https://img.youtube.com/vi/3l6TbYEbaoo/default.jpg)](https://youtu.be/3l6TbYEbaoo)
 
